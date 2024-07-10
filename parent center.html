@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Reports - Co-scholar</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5; /* Light background color */
+            color: #333;
+        }
+
+        .header {
+            background-color: #ff7f50;
+            color: #ffffff;
+            padding: 10px 0;
+        }
+
+        .header .nav-link {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .header .nav-link:hover {
+            color: #ffffff;
+        }
+
+        .content, .services-description, .library-section, .form-section, .report-section {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #ff7f50;
+            border-color: #ff7f50;
+        }
+
+        .btn-primary:hover {
+            background-color: #e36b40;
+            border-color: #e36b40;
+        }
+
+        .btn-secondary {
+            background-color: #333333;
+            border-color: #333333;
+        }
+
+        .btn-secondary:hover {
+            background-color: #555555;
+            border-color: #555555;
+        }
+
+        @media (min-width: 768px) {
+            .main-content, .sidebar, .library-section, .report-section {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .main-content, .sidebar {
+                flex: 1;
+            }
+
+            .sidebar {
+                width: 30%;
+                margin-left: 20px;
+            }
+        }
+
+        /* Footer Styles */
+        #footer {
+            background-color: #ff7f50;
+            color: #ffffff;
+            padding: 40px 0;
+            font-size: 14px;
+        }
+
+        #footer .footer-top {
+            background: #e36b40;
+            padding: 60px 0 30px 0;
+            color: #ffffff;
+        }
+
+        #footer h4 {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        #footer .footer-info p, #footer .footer-links ul, #footer .footer-newsletter p {
+            color: #ffffff;
+        }
+
+        #footer .footer-links ul li {
+            list-style: none;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        #footer .footer-links ul i {
+            font-size: 18px;
+            padding-right: 2px;
+            color: #ffffff;
+        }
+
+        #footer .footer-links ul a {
+            color: #ffffff;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        #footer .footer-links ul a:hover {
+            color: #000000;
+        }
+
+        #footer .social-links a {
+            font-size: 18px;
+            display: inline-block;
+            background: #333333;
+            color: #ffffff;
+            line-height: 1;
+            padding: 8px 0;
+            margin-right: 4px;
+            border-radius: 50%;
+            text-align: center;
+            width: 36px;
+            height: 36px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        #footer .social-links a:hover {
+            background: #ffffff;
+            color: #333333;
+        }
+
+        #footer .footer-newsletter input[type="email"] {
+            border: 0;
+            padding: 6px 8px;
+            width: 65%;
+            border-radius: 4px 0 0 4px;
+        }
+
+        #footer .footer-newsletter input[type="submit"] {
+            background: #333333;
+            border: 0;
+            width: 35%;
+            padding: 6px 0;
+            text-align: center;
+            color: #ffffff;
+            transition: 0.3s;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        #footer .footer-newsletter input[type="submit"]:hover {
+            background: #555555;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .report-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .report-card h5 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <nav class="header navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><b>Co-scholar</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact us.html"><b>Contact Us</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teachers.html"><b>Teachers</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="meeting rooms.html"><b>Meeting Rooms</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="library.html"><b>Library</b></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="parent_reports.html"><b>Parent Reports</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-md-8 main-content">
+                <div class="content">
+                    <h1>Welcome to Co-scholar</h1>
+                    <p>Co-scholar is a world of learning, teaching, and research. Our main purpose is to make the education sector a better place where students and teachers do not struggle with resource allocation. We strive to provide a comprehensive educational experience through our various services and initiatives. Our platform offers a collaborative environment where students can thrive and educators can share their expertise.</p>
+                    <p>At Co-scholar, we believe in the power of education to transform lives. Our mission is to make learning accessible and enjoyable for everyone. We provide a range of tools and resources designed to support the academic community, from innovative teaching methods to cutting-edge research facilities. Join us in our journey to create a brighter future for education.</p>
+                </div>
+
+                <div class="services-description">
+                    <h2>Our Services</h2>
+                    <p>At Co-scholar, we offer a wide range of services to support students and teachers:</p>
+                    <ul>
+                        <li><b>Resource Management:</b> Efficiently manage educational resources to ensure they are readily available to those in need. We provide a robust system that allows easy access to books, journals, and other learning materials.</li>
+                        <li><b>Online Courses:</b> Access a variety of courses taught by expert instructors, available anytime and anywhere. Our online learning platform is designed to cater to the needs of all learners, with interactive lessons and real-time feedback.</li>
+                        <li><b>Research Assistance:</b> Get support and guidance for conducting research and accessing necessary resources. Our team of experienced researchers is here to help you navigate through your academic journey.</li>
+                        <li><b>Community Engagement:</b> Participate in community events and activities that foster learning and collaboration. We organize workshops, seminars, and discussion forums to encourage knowledge sharing and networking.</li>
+                    </ul>
+                    <p>Join Co-scholar today and take advantage of our comprehensive services to enhance your educational experience. Whether you are a student seeking knowledge or a teacher looking to share your expertise, we have something for everyone.</p>
+                </div>
+            </div>
+
+            <!-- Sidebar with Form and Library Section -->
+            <div class="col-md-4 sidebar">
+                <div class="form-section">
+                    <h2>Create an Account / Sign In</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                        <button type="submit" class="btn btn-secondary">Create an Account</button>
+                    </form>
+                </div>
+
+                <div class="library-section">
+                    <h2>Library</h2>
+                    <p>Our library offers a vast collection of books, journals, and other resources to support your learning and research needs.</p>
+                    <p>Browse through our extensive catalog and find the materials you need for your academic journey.</p>
+                    <button class="btn btn-primary">Visit the Library</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 report-section">
+                <h2>Parent Reports</h2>
+                <p>Access the reports on your children's performance and progress.</p>
+
+                <div class="form-section">
+                    <h3>View Report</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="studentName">Student Name</label>
+                            <input type="text" class="form-control" id="studentName" placeholder="Enter student's name">
+                        </div>
+                        <div class="form-group">
+                            <label for="reportPeriod">Report Period</label>
+                            <select class="form-control" id="reportPeriod">
+                                <option value="Q1">Quarter 1</option>
+                                <option value="Q2">Quarter 2</option>
+                                <option value="Q3">Quarter 3</option>
+                                <option value="Q4">Quarter 4</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Get Report</button>
+                    </form>
+                </div>
+
+                <div class="report-section">
+                    <h3>Report Summary</h3>
+                    <div class="report-card">
+                        <h5>Student Name: John Doe</h5>
+                        <p><strong>Math:</strong> A</p>
+                        <p><strong>Science:</strong> B+</p>
+                        <p><strong>Literature:</strong> A-</p>
+                        <p><strong>History:</strong> B</p>
+                        <p><strong>Technology:</strong> A</p>
+                        <p><strong>Remarks:</strong> John has shown great improvement in his studies and is excelling in technology.</p>
+                    </div>
+                    <div class="report-card">
+                        <h5>Student Name: Jane Smith</h5>
+                        <p><strong>Math:</strong> B</p>
+                        <p><strong>Science:</strong> A</p>
+                        <p><strong>Literature:</strong> B+</p>
+                        <p><strong>History:</strong> A-</p>
+                        <p><strong>Technology:</strong> B+</p>
+                        <p><strong>Remarks:</strong> Jane is a consistent performer and has a strong grasp of scientific concepts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <h3>Co-scholar</h3>
+                        <p>
+                            123 Street Name<br>
+                            City, Country<br><br>
+                            <strong>Phone:</strong> +256 772577366<br>
+                            <strong>Email:</strong> info@Co-scholar.com<br>
+                        </p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="contact us.html">Contact Us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Teachers</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Meeting Rooms</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Library</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Resource Management</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Online Courses</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Research Assistance</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Community Engagement</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Access</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Our Newsletter</h4>
+                        <p>Please you can also subscribe to our newsletter</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Co-scholar</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a href="#">sir_penfold the great</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
